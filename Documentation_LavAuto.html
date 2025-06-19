@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation du Projet LavAuto</title>
+    <style>
+        body { font-family: 'Calibri', sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
+        h1 { color: #2c5282; border-bottom: 2px solid #2c5282; padding-bottom: 10px; }
+        h2 { color: #2b6cb0; margin-top: 30px; }
+        h3 { color: #3182ce; }
+        .toc { background: #f7fafc; padding: 20px; border-radius: 5px; margin: 20px 0; }
+        .note { background: #ebf8ff; padding: 10px; border-left: 4px solid #4299e1; margin: 10px 0; }
+        ul, ol { margin-left: 20px; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #e2e8f0; padding: 8px; text-align: left; }
+        th { background: #f7fafc; }
+    </style>
+</head>
+<body>
+    <h1>Documentation du Projet LavAuto</h1>
+
+    <div class="toc">
+        <h2>Table des matières</h2>
+        <ol>
+            <li>Guide Utilisateur
+                <ol>
+                    <li>Introduction</li>
+                    <li>Interface Principale</li>
+                    <li>Gestion des Services</li>
+                    <li>Gestion des Clients</li>
+                    <li>Gestion des Réservations</li>
+                    <li>Gestion des Factures</li>
+                </ol>
+            </li>
+            <li>Documentation Technique
+                <ol>
+                    <li>Architecture du Projet</li>
+                    <li>Base de Données</li>
+                    <li>Technologies Utilisées</li>
+                </ol>
+            </li>
+            <li>Installation et Configuration
+                <ol>
+                    <li>Prérequis</li>
+                    <li>Installation</li>
+                    <li>Configuration de la Base de Données</li>
+                    <li>Maintenance</li>
+                </ol>
+            </li>
+        </ol>
+    </div>
+
+    <h2>1. Guide Utilisateur</h2>
+
+    <h3>1.1. Introduction</h3>
+    <p>LavAuto est une application de gestion pour les services de lavage automobile. Elle permet de gérer les clients, les services, les réservations et les factures de manière simple et efficace.</p>
+
+    <h3>1.2. Interface Principale</h3>
+    <p>L'application est divisée en quatre onglets principaux :</p>
+    <ul>
+        <li><strong>Services</strong> : Gestion des services proposés</li>
+        <li><strong>Clients</strong> : Gestion de la base clients</li>
+        <li><strong>Réservations</strong> : Gestion des rendez-vous</li>
+        <li><strong>Factures</strong> : Gestion de la facturation</li>
+    </ul>
+
+    <h3>1.3. Gestion des Services</h3>
+    <h4>Ajouter un service</h4>
+    <ol>
+        <li>Cliquez sur l'onglet "Services"</li>
+        <li>Cliquez sur le bouton "Ajouter"</li>
+        <li>Remplissez les informations :
+            <ul>
+                <li>Nom du service</li>
+                <li>Prix (en FCFA)</li>
+            </ul>
+        </li>
+        <li>Cliquez sur "Enregistrer"</li>
+    </ol>
+
+    <h4>Modifier un service</h4>
+    <ol>
+        <li>Sélectionnez le service dans la liste</li>
+        <li>Cliquez sur "Modifier"</li>
+        <li>Mettez à jour les informations</li>
+        <li>Cliquez sur "Enregistrer"</li>
+    </ol>
+
+    <h3>1.4. Gestion des Clients</h3>
+    <h4>Ajouter un client</h4>
+    <ol>
+        <li>Cliquez sur l'onglet "Clients"</li>
+        <li>Cliquez sur "Ajouter"</li>
+        <li>Remplissez les informations :
+            <ul>
+                <li>Nom</li>
+                <li>Prénom</li>
+                <li>Téléphone</li>
+            </ul>
+        </li>
+        <li>Cliquez sur "Enregistrer"</li>
+    </ol>
+
+    <h4>Modifier un client</h4>
+    <ol>
+        <li>Sélectionnez le client dans la liste</li>
+        <li>Cliquez sur "Modifier"</li>
+        <li>Mettez à jour les informations</li>
+        <li>Cliquez sur "Enregistrer"</li>
+    </ol>
+
+    <h3>1.5. Gestion des Réservations</h3>
+    <h4>Créer une réservation</h4>
+    <ol>
+        <li>Cliquez sur l'onglet "Réservations"</li>
+        <li>Cliquez sur "Ajouter"</li>
+        <li>Sélectionnez :
+            <ul>
+                <li>Le client</li>
+                <li>Le service</li>
+                <li>La date et l'heure</li>
+                <li>Le statut (en attente, en cours, termine)</li>
+            </ul>
+        </li>
+        <li>Cliquez sur "Enregistrer"</li>
+    </ol>
+
+    <h4>Suivi des réservations</h4>
+    <p>Les réservations sont affichées avec leur statut :</p>
+    <ul>
+        <li><strong>En attente</strong> : Réservation future</li>
+        <li><strong>En cours</strong> : Service en cours de réalisation</li>
+        <li><strong>Termine</strong> : Service terminé</li>
+    </ul>
+
+    <div class="note">
+        <strong>Note importante :</strong> Une facture est automatiquement créée lorsqu'une réservation passe au statut "termine"
+    </div>
+
+    <h3>1.6. Gestion des Factures</h3>
+    <h4>Consulter les factures</h4>
+    <ol>
+        <li>Cliquez sur l'onglet "Factures"</li>
+        <li>La liste affiche :
+            <ul>
+                <li>Numéro de facture</li>
+                <li>Client</li>
+                <li>Date</li>
+                <li>Montant</li>
+                <li>Statut de paiement</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h4>Marquer une facture comme payée</h4>
+    <ol>
+        <li>Sélectionnez la facture</li>
+        <li>Cliquez sur "Payer"</li>
+        <li>Confirmez le paiement</li>
+    </ol>
+
+    <h2>2. Documentation Technique</h2>
+
+    <h3>2.1. Architecture du Projet</h3>
+    <p>Le projet est structuré en plusieurs couches :</p>
+    <ul>
+        <li><strong>UI</strong> : Interface utilisateur (Swing)</li>
+        <li><strong>DAO</strong> : Accès aux données</li>
+        <li><strong>Model</strong> : Classes métier</li>
+        <li><strong>DB</strong> : Gestion de la base de données</li>
+    </ul>
+
+    <h3>2.2. Base de Données</h3>
+    <table>
+        <tr>
+            <th>Table</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>clients</td>
+            <td>Stockage des informations clients</td>
+        </tr>
+        <tr>
+            <td>services</td>
+            <td>Liste des services disponibles</td>
+        </tr>
+        <tr>
+            <td>reservations</td>
+            <td>Gestion des rendez-vous</td>
+        </tr>
+        <tr>
+            <td>factures</td>
+            <td>Suivi des paiements</td>
+        </tr>
+    </table>
+
+    <h3>2.3. Technologies Utilisées</h3>
+    <ul>
+        <li>Java 8+</li>
+        <li>Swing pour l'interface graphique</li>
+        <li>MySQL pour la base de données</li>
+        <li>JDBC pour l'accès aux données</li>
+    </ul>
+
+    <h2>3. Installation et Configuration</h2>
+
+    <h3>3.1. Prérequis</h3>
+    <ul>
+        <li>Java JDK 8 ou supérieur</li>
+        <li>MySQL Server</li>
+        <li>Maven (optionnel)</li>
+    </ul>
+
+    <h3>3.2. Installation</h3>
+    <ol>
+        <li>Clonez le projet</li>
+        <li>Importez la base de données</li>
+        <li>Configurez les accès à la base de données dans DatabaseConnection.java</li>
+        <li>Compilez le projet</li>
+        <li>Lancez l'application</li>
+    </ol>
+
+    <h3>3.3. Maintenance</h3>
+    <ul>
+        <li>Sauvegarde régulière de la base de données recommandée</li>
+        <li>Vérification périodique des logs d'erreur</li>
+        <li>Mise à jour des pilotes JDBC si nécessaire</li>
+    </ul>
+</body>
+</html> 
